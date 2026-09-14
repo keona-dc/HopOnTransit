@@ -1,25 +1,28 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
-import heroImg from "./assets/hero.png";
 import "./App.css";
+
+import Navbar from "../components/Navbar.jsx";
+import Hero from "../components/Hero.jsx";
+import About from "../components/About.jsx";
+import Services from "../components/Services.jsx";
+import Van from "../components/Van.jsx";
 import BookingForm from "../components/BookingForm.jsx";
+import FAQ from "../components/FAQ.jsx";
+import Contact from "../components/Contact.jsx";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <h1>HopOnTransit</h1>
-      <p>
-        Hop On Transit provides reliable, accessible van rentals that make
-        getting around easier for everyone. We focus on safe, comfortable, and
-        inclusive transportation that you can book quickly and with confidence.
-        Whether it’s a planned trip or a last-minute need, our service is
-        designed to remove barriers and give you dependable mobility when it
-        matters most.
-      </p>
-      <BookingForm />
+      <Navbar />
+
+      <main>
+        <Hero />
+        <About />
+        <Services />
+        <Van />
+        <BookingForm />
+        <FAQ />
+        <Contact />
+      </main>
     </>
   );
 }
